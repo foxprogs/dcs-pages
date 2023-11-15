@@ -10,7 +10,8 @@
 .container-width {
   max-width: 1364px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding-left: 32px;
+  padding-right: 32px;
   width: 100%;
 }
 
@@ -263,10 +264,11 @@
 
 @media (max-width: 575px) {
   .container-width {
-    padding: 0 16px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .card-block {
-    padding: 250px 16px 0px 16px;
+    padding: 250px 12px 0px 12px;
   }
   .help-title {
     font-size: 24px;
