@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
+
+/** MAIN PAGE **/
 .main-content {
   font-size: 18px;
   color: black;
@@ -292,3 +294,30 @@
     font-size: 18px;
   }
 }
+/** end MAIN PAGE **/
+
+/** TOOLS PAGE **/
+
+/** end TOOLS PAGE **/
+
+/** FOOTER **/
+.powered-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .page-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 32px;
+  }
+  .left-links {
+    order: -1;
+    flex: 0 1 auto;
+    width: 100%;
+  }
+}
+
+/** end FOOTER **/
