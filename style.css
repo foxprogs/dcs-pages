@@ -267,6 +267,9 @@
     padding-left: 12px;
     padding-right: 12px;
   }
+  .cards {
+    padding: 16px;
+  }
   .card-block {
     padding: 250px 12px 0px 12px;
   }
