@@ -454,6 +454,14 @@
 }
 
 @media (max-width: 575px) {
+  .tools-bg .card {
+    padding: 16px;
+  }
+  .tool,
+  .extra {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 /** end TOOLS PAGE **/
 
