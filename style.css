@@ -63,7 +63,9 @@
   font-size: 24px;
   font-weight: 600;
 }
-.card-link {
+.card-link,
+.card-link2,
+.card-link3 {
   color: white;
   text-decoration: underline;
 }
@@ -71,6 +73,15 @@
 .card-link:active {
   color: #aac906;
 }
+.card-link2:hover,
+.card-link2:active {
+  color: #f5e121;
+}
+.card-link3:hover,
+.card-link3:active {
+  color: #78b4ef;
+}
+
 .register-button {
   padding: 16px 40px;
   margin-top: 16px;
