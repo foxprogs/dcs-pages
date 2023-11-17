@@ -82,10 +82,11 @@
                 para-scriptural
                 resources that help provide contextual accuracy to the translated text.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">Scribe Scripture Editor (Scribe SE)</div>
               <div class="tool-subtitle">Desktop Scripture translation editor</div>
               <div class="tool-content">
@@ -126,10 +127,11 @@
                 assurance and checks of any translated Scripture text associated with that specific
                 language.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">gatewayTranslate</div>
               <div class="tool-subtitle">Bible resource translation tool</div>
               <div class="tool-content">
@@ -168,10 +170,11 @@
                 resources. This tool will greatly expedite the production of the resources needed
                 to further unfoldingWord’s Gateway Language Strategy.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">tC Create</div>
               <div class="tool-subtitle">Creating resources for translationCore</div>
               <div class="tool-content">
@@ -200,10 +203,11 @@
                 a side-by-side interface. The process referred to as harmonization ensures consistency
                 and cohesion in a Book Package.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">gatewayEdit</div>
               <div class="tool-subtitle">Online Bible & OBS Book Package revision tool</div>
               <div class="tool-content">
@@ -239,10 +243,11 @@
                 process. VCANA ensures the translation teams have a comprehensive understanding of
                 the translation process and quality assurance measures within Scripture translation.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">VCANA</div>
               <div class="tool-subtitle">Guided Scripture translation tool</div>
               <div class="tool-content">
@@ -279,10 +284,11 @@
                 them to review key theological and lexical terms and enhance the consistency and
                 accuracy of the translated resources.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">translationCore</div>
               <div class="tool-subtitle">Scripture checking and alignment tool</div>
               <div class="tool-content">
@@ -325,10 +331,11 @@
                 up file repositories, accepting resource file changes, and facilitating publishing of
                 resources on Door43 Content Services (DCS).</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">gatewayAdmin</div>
               <div class="tool-subtitle">Administrator tool for file management and publication</div>
               <div class="tool-content">
@@ -361,10 +368,11 @@
             <div class="tool-content">
               <p>DCS is a content management system for open-licensed biblical resources</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">Door43 Content Services (DCS)</div>
               <div class="tool-content">
                 <p>DCS is a content management system for open-licensed biblical resources</p>
@@ -399,10 +407,11 @@
                 teams to access open-licensed translated biblical resources, conduct thorough studies,
                 test their translations, and seek constructive feedback.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">Open Bible Text</div>
               <div class="tool-subtitle">Tool for community checking of published resources</div>
               <div class="tool-content">
@@ -434,10 +443,11 @@
                   target="_blank" class="tool-link">forum</a> that enables the community
                 to collaborate on open licensed Biblical content creation.</p>
             </div>
-            <div class="tool-more" onclick="showExtra(this)">
+            <div class="tool-more tool-link" onclick="showExtra(this)">
               learn more
             </div>
             <div class="extra">
+              <div class="extra-close"></div>
               <div class="tool-title">Door43 Website</div>
               <div class="tool-subtitle">An online catalog of unrestricted biblical content in every language</div>
               <div class="tool-content">
@@ -518,10 +528,15 @@
   </footer>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll('.extra').forEach(el => el.addEventListener('click', (e) => {
-        if (e.target.tagName.toLowerCase() !== 'a') {
-          el.classList.remove('show');
-        }
+      document.addEventListener('click', (e) => {
+        document.querySelectorAll('.extra').forEach(el => {
+          if (!el.contains(e.target) && !e.target.classList.contains('tool-more')) {
+            el.classList.remove('show');
+          }
+        })
+      })
+      document.querySelectorAll('.extra-close').forEach(el => el.addEventListener('click', () => {
+        el.parentElement.classList.remove('show');
       }))
     });
 
